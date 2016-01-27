@@ -1,36 +1,61 @@
+document_fields = [
+    'publisher.publisher_name',
+    'publisher.place_of_publication',
+    'publication_type',
+    'country_of_publication',
+    'language',
+    'contributor.name',
+    'contributor.role',
+    'title',
+    'idno',
+    'idno.type',
+    'subject',
+    'publishing_work_items.value',
+    'publishing_work_items.type',
+    'publishing_work_items.unit'
+]
+
+
 class WordDocument:
     def __init__(self, work):
         self.work = work
 
+    def get_features_array(self):
+        result = []
+        features = self.get_document_features()
+        for field in document_fields:
+            result.append(features[field].encode('utf-8'))
+        return result
+
     def get_document_features(self):
         features = {
-            'publisher.publisher_name':
+            document_fields[0]:
                 self.get_work_item_value(self.work, 'work▪publisher.work▪publisher▪name.val'),
-            'publisher.place_of_publication':
+            document_fields[1]:
                 self.get_work_item_value(self.work, 'work▪publisher.work▪publisher▪placeOfPublication.val'),
-            'publication_type':
+            document_fields[2]:
                 self.get_work_item_value(self.work, 'work▪publicationType.val'),
-            'country_of_publication':
+            document_fields[3]:
                 self.get_work_item_value(self.work, 'work▪publicationCountry.work▪publicationCountry▪country.val'),
-            'language':
+            document_fields[4]:
                 self.get_work_item_value(self.work, 'work▪workLanguage.work▪workLanguage▪language.val'),
-            'contributor.name':
+            document_fields[5]:
                 self.get_work_item_value(self.work, 'work▪contributor.work▪contributor▪contributorName.val'),
-            'contributor.role':
+            document_fields[6]:
                 self.get_work_item_value(self.work, 'work▪contributor.work▪contributor▪contributorRole.val'),
-            'title':
+            document_fields[7]:
                 self.get_work_item_value(self.work, 'work▪workTitle.work▪workTitle▪title.val'),
-            'idno':
+            document_fields[8]:
                 self.get_work_item_value(self.work, 'work▪idno.work▪idno▪idno.val'),
-            'idno.type':
+            document_fields[9]:
                 self.get_work_item_value(self.work, 'work▪idno.work▪idno▪type.val'),
-            'subject':
+            document_fields[10]:
                 self.get_work_item_value(self.work, 'work▪workSubject.work▪workSubject▪subject.val'),
-            'publishing_work_items.value':
+            document_fields[11]:
                 self.get_work_item_value(self.work, 'work▪extent.work▪extent▪extentValueRaw.val'),
-            'publishing_work_items.type':
+            document_fields[12]:
                 self.get_work_item_value(self.work, 'work▪extent.work▪extent▪extentType.val'),
-            'publishing_work_items.unit':
+            document_fields[13]:
                 self.get_work_item_value(self.work, 'work▪extent.work▪extent▪extentUnit.val')
         }
 
