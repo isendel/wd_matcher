@@ -19,7 +19,7 @@ from wd_matcher.works import document_fields
 config = configparser.ConfigParser()
 config.read('settings.ini')
 
-max_rel = 1000
+max_rel = 500
 client = MongoClient(config['DEV']['mongodb.host'], int(config['DEV']['mongodb.port']))
 db = client.works
 works_collection = db.archive_works
@@ -36,43 +36,38 @@ def get_work(work_id):
     return works_collection.find_one({'_id': work_id})
 
 
-def dump_rel_to_csv(filter=''):
+def dump_rel_to_csv(filters):
     with open('documents_rel.csv', 'w') as csvfile:
         csv_writer = csv.writer(csvfile, lineterminator='\n')
         csv_writer.writerow(document_fields + ['label'])
         equivalence_relations = db.equivalence_relations
-        rel_processed = 0
-        if filter:
+        for filter in filters:
             equivalence_relations_cursor = equivalence_relations.find(
                     {'storageEquivalenceRelation.equivalenceRelation.equivalenceType': filter})
-        else:
-            equivalence_relations_cursor = equivalence_relations.find(
-                    {'$or': [{'storageEquivalenceRelation.equivalenceRelation.equivalenceType': 'FORCE_MATCH'},
-                             {'storageEquivalenceRelation.equivalenceRelation.equivalenceType': 'FORCE_NO_MATCH'}]}
-            )
-        for rel in equivalence_relations_cursor:
-            relation_ = rel['storageEquivalenceRelation']
-            try:
-                incoming_work_id = relation_['incomingWorkId']
-                representative_work_id = relation_['representativeWorkId']
-            except KeyError as e:
-                logger.error('Error occurred...')
-                logger.error(e)
-            else:
-                work_incoming = works_collection.find_one({'_id': incoming_work_id})
-                work_representative = works_collection.find_one({'_id': representative_work_id})
-                if work_incoming and work_representative:
-                    if rel_processed >= max_rel:
-                        break
-                    else:
-                        rel_processed += 1
-                    work1, work2 = get_work_rel_row_info(rel)
-                    label = relation_['equivalenceRelation']['equivalenceType']
-                    csv_writer.writerow(work1.get_features_array() + [label])
-                    csv_writer.writerow(work2.get_features_array() + [label])
-                    if rel_processed % 100 == 0:
-                        logger.info('Relationships processed %s/%s' % (rel_processed, max_rel))
-        logger.info('%s/%s relationships are valid' % (rel_processed, max_rel))
+            rel_processed = 0
+            for rel in equivalence_relations_cursor:
+                relation_ = rel['storageEquivalenceRelation']
+                try:
+                    incoming_work_id = relation_['incomingWorkId']
+                    representative_work_id = relation_['representativeWorkId']
+                except KeyError as e:
+                    logger.error('Error occurred...')
+                    logger.error(e)
+                else:
+                    work_incoming = works_collection.find_one({'_id': incoming_work_id})
+                    work_representative = works_collection.find_one({'_id': representative_work_id})
+                    if work_incoming and work_representative:
+                        if rel_processed >= max_rel:
+                            break
+                        else:
+                            rel_processed += 1
+                        work1, work2 = get_work_rel_row_info(rel)
+                        label = relation_['equivalenceRelation']['equivalenceType']
+                        csv_writer.writerow(work1.get_features_array() + [label])
+                        csv_writer.writerow(work2.get_features_array() + [label])
+                        if rel_processed % 100 == 0:
+                            logger.info('Relationships processed %s/%s for %s' % (rel_processed, max_rel, filter))
+            logger.info('%s/%s relationships are valid for filter %s' % (rel_processed, max_rel, filter))
 
 
 if os.path.exists('dataset'):
@@ -80,4 +75,4 @@ if os.path.exists('dataset'):
 os.makedirs('dataset')
 # dump_rel_to_csv('FORCE_MATCH')
 # dump_rel_to_csv('FORCE_NO_MATCH')
-dump_rel_to_csv()
+dump_rel_to_csv(['FORCE_NO_MATCH', 'FORCE_MATCH'])
