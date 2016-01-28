@@ -1,0 +1,480 @@
+{
+  "work": {
+    "workItemValues": {
+      "work▪updatedUser": [
+        {
+          "val": "gmorgan@copyright.com",
+          "type": "ST"
+        }
+      ],
+      "work▪recordSubType": [
+        {
+          "val": "33",
+          "type": "ST"
+        }
+      ],
+      "work▪updatedDatetime": [
+        {
+          "val": "1332086872000",
+          "type": "TS"
+        }
+      ],
+      "work▪typeId": [
+        {
+          "val": "582f3e92-4800-41a3-8dd8-6e2658f6462b",
+          "type": "ST"
+        }
+      ],
+      "work▪publisher": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪publisher▪role": [
+              {
+                "val": "8",
+                "type": "ST"
+              }
+            ],
+            "work▪publisher▪roleDescr": [
+              {
+                "val": "Publisher",
+                "type": "ST"
+              }
+            ],
+            "work▪publisher▪name": [
+              {
+                "val": "Elsevier Science",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪publisher▪status": [
+              {
+                "val": "1",
+                "type": "ST"
+              }
+            ],
+            "work▪publisher▪role": [
+              {
+                "val": "8",
+                "type": "ST"
+              }
+            ],
+            "work▪publisher▪roleDescr": [
+              {
+                "val": "Publisher",
+                "type": "ST"
+              }
+            ],
+            "work▪publisher▪statusDescr": [
+              {
+                "val": "Latest Publisher",
+                "type": "ST"
+              }
+            ],
+            "work▪publisher▪name": [
+              {
+                "val": "Nature Publishing Group",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪createdDatetime": [
+        {
+          "val": "1223035160000",
+          "type": "TS"
+        }
+      ],
+      "work▪publicationTypeDescr": [
+        {
+          "val": "e-Journal",
+          "type": "ST"
+        }
+      ],
+      "work▪version": [
+        {
+          "val": "1",
+          "type": "LO"
+        }
+      ],
+      "work▪createdUser": [
+        {
+          "val": "WRLOAD",
+          "type": "ST"
+        }
+      ],
+      "work▪publicationCountry": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪publicationCountry▪country": [
+              {
+                "val": "USA",
+                "type": "ST"
+              }
+            ],
+            "work▪publicationCountry▪countryDescr": [
+              {
+                "val": "United States of America",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪mediaTypeDescr": [
+        {
+          "val": "Electronic",
+          "type": "ST"
+        }
+      ],
+      "work▪publishingFrequencyDescr": [
+        {
+          "val": "Monthly",
+          "type": "ST"
+        }
+      ],
+      "work▪mediaType": [
+        {
+          "val": "2",
+          "type": "ST"
+        }
+      ],
+      "work▪workLanguage": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪workLanguage▪languageRoleDescr": [
+              {
+                "val": "Text",
+                "type": "ST"
+              }
+            ],
+            "work▪workLanguage▪language": [
+              {
+                "val": "XXX",
+                "type": "ST"
+              }
+            ],
+            "work▪workLanguage▪languageDescr": [
+              {
+                "val": "Unknown",
+                "type": "ST"
+              }
+            ],
+            "work▪workLanguage▪languageRole": [
+              {
+                "val": "10",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪recordLevel": [
+        {
+          "val": "7",
+          "type": "ST"
+        }
+      ],
+      "work▪publicationType": [
+        {
+          "val": "11",
+          "type": "ST"
+        }
+      ],
+      "work▪note": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "30007",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Inserted via repository post",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "70000",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪note": [
+              {
+                "val": "Language change",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Work augmented.",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "CCCSOURCEBIBLIO",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪note": [
+              {
+                "val": "Title from title screen via ESTAR.",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Source File Bibliographic",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪clusterUnitId": [
+        {
+          "val": "09196eeb-a453-4ba9-802a-8ed7c766bfa8",
+          "type": "ST"
+        }
+      ],
+      "work▪recordLevelDescr": [
+        {
+          "val": "Serial",
+          "type": "ST"
+        }
+      ],
+      "work▪dataSource": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪dataSource▪sourceRecordQuality": [
+              {
+                "val": "6",
+                "type": "ST"
+              }
+            ],
+            "work▪dataSource▪sourcePrimaryKey": [
+              {
+                "val": "012432450",
+                "type": "ST"
+              }
+            ],
+            "work▪dataSource▪sourcePriority": [
+              {
+                "val": "15210",
+                "type": "LO"
+              }
+            ],
+            "work▪dataSource▪sourceRecordQualityDescr": [
+              {
+                "val": "Abbreviated Level",
+                "type": "ST"
+              }
+            ],
+            "work▪dataSource▪sourceCode": [
+              {
+                "val": "a0e0741b-4a18-4026-b717-a02edf1de416",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪recordType": [
+        {
+          "val": "4",
+          "type": "ST"
+        }
+      ],
+      "work▪mediaTypeCategory": [
+        {
+          "val": "O",
+          "type": "ST"
+        }
+      ],
+      "work▪publishingFrequency": [
+        {
+          "val": "MONTHLY",
+          "type": "ST"
+        }
+      ],
+      "work▪workTitle": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪workTitle▪typeDescr": [
+              {
+                "val": "Main Title",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪title": [
+              {
+                "val": "Clinical pharmacology and therapeutics",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪type": [
+              {
+                "val": "MAIN",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪idno": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪idno▪typeDescr": [
+              {
+                "val": "Incorrect ISSN",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idnoRaw": [
+              {
+                "val": "0009-9236",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪type": [
+              {
+                "val": "INCORRISSN",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idno": [
+              {
+                "val": "0009-9236",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪validated": [
+              {
+                "val": "True",
+                "type": "BL"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪idno▪typeDescr": [
+              {
+                "val": "MARC Control Number",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idnoRaw": [
+              {
+                "val": "012432450",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪type": [
+              {
+                "val": "MARCCONTROL",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idno": [
+              {
+                "val": "012432450",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪validated": [
+              {
+                "val": "False",
+                "type": "BL"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "_id": "a23ee39c-5395-49e4-84da-d4ad0d3baaef",
+    "relationships": [],
+    "workAttribute": {
+      "verified": False,
+      "isNew": False,
+      "requiresVerification": False,
+      "useSPK": False,
+      "jobId": "2af2160e-8e38-4448-8067-5b38cd74f698",
+      "clusterKeyIds": [
+        "6b64c564529bee000305ab5c892049c231eeda58"
+      ],
+      "fromManualMatching": False,
+      "preserved": False,
+      "valid": 0,
+      "jobUnitId": "1"
+    },
+    "matchItemValues": {
+      "work▪idno▪idno#INCORRISSN|work▪idno▪type": "00099236",
+      "work▪dataSource▪sourcePrimaryKey": "012432450",
+      "work▪dataSource▪sourceCode": "a0e0741b 4a18 4026 b717 a02edf1de416",
+      "work▪workTitle▪title#HASCOMMONTITLE|work▪workTitle▪type": "false",
+      "work▪publisher▪name#8|work▪publisher▪role": "elsevier science",
+      "work▪publicationCountry▪country": "usa",
+      "work▪workTitle▪title#MAIN|work▪workTitle▪type": "clinical pharmacology and therapeutics"
+    },
+    "comments": {
+      "c427d57a-03aa-463f-a1d3-cef14a8122f0": {
+        "commentType": "BIBLIOGRAPHIC",
+        "createdDate": datetime
+        .
+        datetime
+        (
+        2013,
+        9,
+        22,
+        18,
+        4,
+        2,
+        194000
+        ),
+        "createdUser": "WRLOAD",
+        "_id": "c427d57a-03aa-463f-a1d3-cef14a8122f0",
+        "comment": "Automatically created for Migration."
+      }
+    }
+  },
+  "_id": "a23ee39c-5395-49e4-84da-d4ad0d3baaef"
+}

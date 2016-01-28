@@ -1,9 +1,12 @@
 import csv
-import json
 import configparser
 import os
 import logging
 import shutil
+from pymongo import MongoClient
+from wd_matcher.works import WordDocument
+from wd_matcher.works import document_fields
+from wd_matcher.constants import WORKS_DATASET_FILE
 
 logger = logging.getLogger('prepare_dataset')
 logger.setLevel(logging.DEBUG)
@@ -12,15 +15,12 @@ ch.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(me
 ch.setLevel(logging.DEBUG)
 logger.addHandler(ch)
 
-from pymongo import MongoClient
-from wd_matcher.works import WordDocument
-from wd_matcher.works import document_fields
 
 config = configparser.ConfigParser()
 config.read('settings.ini')
 
 max_rel = 500
-client = MongoClient(config['DEV']['mongodb.host'], int(config['DEV']['mongodb.port']))
+client = MongoClient(config['GEN']['mongodb.host'], int(config['GEN']['mongodb.port']))
 db = client.works
 works_collection = db.archive_works
 
@@ -37,7 +37,7 @@ def get_work(work_id):
 
 
 def dump_rel_to_csv(filters):
-    with open('documents_rel.csv', 'w') as csvfile:
+    with open(WORKS_DATASET_FILE, 'w') as csvfile:
         csv_writer = csv.writer(csvfile, lineterminator='\n')
         csv_writer.writerow(document_fields + ['label'])
         equivalence_relations = db.equivalence_relations
@@ -62,7 +62,9 @@ def dump_rel_to_csv(filters):
                         else:
                             rel_processed += 1
                         work1, work2 = get_work_rel_row_info(rel)
-                        label = relation_['equivalenceRelation']['equivalenceType']
+                        label = 0
+                        if relation_['equivalenceRelation']['equivalenceType'] == 'FORCE_MATCH':
+                            label = 1
                         csv_writer.writerow(work1.get_features_array() + [label])
                         csv_writer.writerow(work2.get_features_array() + [label])
                         if rel_processed % 100 == 0:
@@ -70,9 +72,9 @@ def dump_rel_to_csv(filters):
             logger.info('%s/%s relationships are valid for filter %s' % (rel_processed, max_rel, filter))
 
 
-if os.path.exists('dataset'):
-    shutil.rmtree('dataset')
-os.makedirs('dataset')
+# if os.path.exists('dataset'):
+#     shutil.rmtree('dataset')
+# os.makedirs('dataset')
+# dump_rel_to_csv(['FORCE_NO_MATCH', 'FORCE_MATCH'])
 # dump_rel_to_csv('FORCE_MATCH')
 # dump_rel_to_csv('FORCE_NO_MATCH')
-dump_rel_to_csv(['FORCE_NO_MATCH', 'FORCE_MATCH'])

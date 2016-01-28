@@ -34,3 +34,9 @@ class WordDocumentFeatureDistancesTestCase(unittest.TestCase):
         self.assertEqual('AMERICAN THERAPEUTIC SOCIETY. AMERICAN SOCIETY FOR CLINICAL PHARMACOLOGY AND THE '
                          'AMERICAN SOCIETY FOR PHARMACOLOGY AND EXPERIMENTAL STEIN, C. MICHAEL'.lower(),
                          value)
+
+    def test_get_work_item_value_by_order_number(self):
+        value = self.wordDocumentDistances.get_work_item_value_filtered(self.work,
+                                                                        'work▪workTitle.work▪workTitle▪title#$1.val',
+                                                                        'work▪workTitle.work▪workTitle▪type.val=MAIN')
+        self.assertEqual('Clinical pharmacology and therapeutics'.lower(), value.lower())

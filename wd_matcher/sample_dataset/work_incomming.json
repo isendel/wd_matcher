@@ -1,0 +1,1478 @@
+{
+  "work": {
+    "workItemValues": {
+      "work▪updatedUser": [
+        {
+          "val": "mmelton@copyright.com",
+          "type": "ST"
+        }
+      ],
+      "work▪manuallyCreatedFlag": [
+        {
+          "val": "true",
+          "type": "ST"
+        }
+      ],
+      "work▪recordSubType": [
+        {
+          "val": "33",
+          "type": "ST"
+        }
+      ],
+      "work▪createdDatetime": [
+        {
+          "val": "1223192624000",
+          "type": "TS"
+        }
+      ],
+      "work▪typeId": [
+        {
+          "val": "582f3e92-4800-41a3-8dd8-6e2658f6462b",
+          "type": "ST"
+        }
+      ],
+      "work▪publishingFrequencyDescr": [
+        {
+          "val": "Monthly",
+          "type": "ST"
+        }
+      ],
+      "work▪contributor": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪contributor▪contributorRole": [
+              {
+                "val": "2",
+                "type": "ST"
+              }
+            ],
+            "work▪contributor▪contributorRoleDescr": [
+              {
+                "val": "Corporate Author",
+                "type": "ST"
+              }
+            ],
+            "work▪contributor▪contributorName": [
+              {
+                "val": "AMERICAN THERAPEUTIC SOCIETY.",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪contributor▪contributorRole": [
+              {
+                "val": "2",
+                "type": "ST"
+              }
+            ],
+            "work▪contributor▪contributorRoleDescr": [
+              {
+                "val": "Corporate Author",
+                "type": "ST"
+              }
+            ],
+            "work▪contributor▪contributorName": [
+              {
+                "val": "AMERICAN SOCIETY FOR CLINICAL PHARMACOLOGY AND THE",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪contributor▪contributorRole": [
+              {
+                "val": "2",
+                "type": "ST"
+              }
+            ],
+            "work▪contributor▪contributorRoleDescr": [
+              {
+                "val": "Corporate Author",
+                "type": "ST"
+              }
+            ],
+            "work▪contributor▪contributorName": [
+              {
+                "val": "AMERICAN SOCIETY FOR PHARMACOLOGY AND EXPERIMENTAL",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪contributor▪contributorRole": [
+              {
+                "val": "7",
+                "type": "ST"
+              }
+            ],
+            "work▪contributor▪contributorRoleDescr": [
+              {
+                "val": "Editor",
+                "type": "ST"
+              }
+            ],
+            "work▪contributor▪contributorName": [
+              {
+                "val": "STEIN, C. MICHAEL",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪workLanguage": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪workLanguage▪languageRoleDescr": [
+              {
+                "val": "Text",
+                "type": "ST"
+              }
+            ],
+            "work▪workLanguage▪language": [
+              {
+                "val": "ENG",
+                "type": "ST"
+              }
+            ],
+            "work▪workLanguage▪languageDescr": [
+              {
+                "val": "English",
+                "type": "ST"
+              }
+            ],
+            "work▪workLanguage▪languageRole": [
+              {
+                "val": "10",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪publicationTypeDescr": [
+        {
+          "val": "Journal",
+          "type": "ST"
+        }
+      ],
+      "work▪publishingStatusDescr": [
+        {
+          "val": "Active",
+          "type": "ST"
+        }
+      ],
+      "work▪createdUser": [
+        {
+          "val": "WRLOAD",
+          "type": "ST"
+        }
+      ],
+      "work▪mediaTypeCategory": [
+        {
+          "val": "O",
+          "type": "ST"
+        }
+      ],
+      "work▪publicationCountry": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪publicationCountry▪country": [
+              {
+                "val": "USA",
+                "type": "ST"
+              }
+            ],
+            "work▪publicationCountry▪countryDescr": [
+              {
+                "val": "United States of America",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪updatedDatetime": [
+        {
+          "val": "1380554894402",
+          "type": "TS"
+        }
+      ],
+      "work▪publisher": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪publisher▪roleDescr": [
+              {
+                "val": "Publisher",
+                "type": "ST"
+              }
+            ],
+            "work▪publisher▪role": [
+              {
+                "val": "8",
+                "type": "ST"
+              }
+            ],
+            "work▪publisher▪name": [
+              {
+                "val": "Nature Publishing Group",
+                "type": "ST"
+              }
+            ],
+            "work▪publisher▪placeOfPublication": [
+              {
+                "val": "New York, NY",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪workDates": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪workDates▪startDate": [
+              {
+                "val": "19600101",
+                "type": "DT"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪workSubject": [
+        {
+          "val": "ccc939cf-b637-4c33-a964-37af8b462c0f",
+          "type": "GR",
+          "items": {
+            "work▪workSubject▪subject": [
+              {
+                "val": "PHARMACOLOGY",
+                "type": "ST"
+              }
+            ],
+            "work▪workSubject▪typeDescr": [
+              {
+                "val": "LC - Topical Term",
+                "type": "ST"
+              }
+            ],
+            "work▪workSubject▪type": [
+              {
+                "val": "LCTOPICAL",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": "2baa1727-2056-48ea-a641-ae998b351cbd",
+          "type": "GR",
+          "items": {
+            "work▪workSubject▪subject": [
+              {
+                "val": "THERAPEUTICS",
+                "type": "ST"
+              }
+            ],
+            "work▪workSubject▪typeDescr": [
+              {
+                "val": "LC - Topical Term",
+                "type": "ST"
+              }
+            ],
+            "work▪workSubject▪type": [
+              {
+                "val": "LCTOPICAL",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": "794cc479-3c8d-4fde-91d4-ccd8582debcf",
+          "type": "GR",
+          "items": {
+            "work▪workSubject▪subject": [
+              {
+                "val": "DRUG THERAPY",
+                "type": "ST"
+              }
+            ],
+            "work▪workSubject▪typeDescr": [
+              {
+                "val": "LC - Topical Term",
+                "type": "ST"
+              }
+            ],
+            "work▪workSubject▪type": [
+              {
+                "val": "LCTOPICAL",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": "a74955af-8955-42cd-91be-65ff1d136133",
+          "type": "GR",
+          "items": {
+            "work▪workSubject▪subject": [
+              {
+                "val": "PHARMACY AND PHARMACOLOGY",
+                "type": "ST"
+              }
+            ],
+            "work▪workSubject▪typeDescr": [
+              {
+                "val": "Generic Subject",
+                "type": "ST"
+              }
+            ],
+            "work▪workSubject▪type": [
+              {
+                "val": "GENERIC",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": "a1bb749c-8134-4ef0-a277-6a50603e6b7f",
+          "type": "GR",
+          "items": {
+            "work▪workSubject▪subject": [
+              {
+                "val": "SERVICE, TRADE, PROFESSIONAL, INDUSTRIAL PUBLICATIONS-MEDICAL & SURGICAL",
+                "type": "ST"
+              }
+            ],
+            "work▪workSubject▪typeDescr": [
+              {
+                "val": "Generic Subject",
+                "type": "ST"
+              }
+            ],
+            "work▪workSubject▪type": [
+              {
+                "val": "GENERIC",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪publishingStatus": [
+        {
+          "val": "1",
+          "type": "ST"
+        }
+      ],
+      "work▪recordLevel": [
+        {
+          "val": "7",
+          "type": "ST"
+        }
+      ],
+      "work▪publicationType": [
+        {
+          "val": "10",
+          "type": "ST"
+        }
+      ],
+      "work▪note": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "30007",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Inserted via repository post",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "30009",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Edited via works maintenance",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "50002",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪note": [
+              {
+                "val": "Pushed Work to TF. WR WORK ID: 122801854 TF WORK ID: 3195690",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Posting Work to TF completed successfully",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "70000",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪note": [
+              {
+                "val": "Augmented by 100058742.",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Work augmented.",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "70000",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪note": [
+              {
+                "val": "Augmented title",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Work augmented.",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "CCCSOURCEBIBLIO",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪note": [
+              {
+                "val": "CD-ROM edition",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Source File Bibliographic",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "CCCSOURCEBIBLIO",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪note": [
+              {
+                "val": "MI",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Source File Bibliographic",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "CCCSOURCEBIBLIO",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪note": [
+              {
+                "val": "Print",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Source File Bibliographic",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪note▪type": [
+              {
+                "val": "CCCSOURCEBIBLIO",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪note": [
+              {
+                "val": "ProQuest Information & Learning",
+                "type": "ST"
+              }
+            ],
+            "work▪note▪typeDescr": [
+              {
+                "val": "Source File Bibliographic",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪extent": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪extent▪extentUnit": [
+              {
+                "val": "7",
+                "type": "ST"
+              }
+            ],
+            "work▪extent▪extentValueRaw": [
+              {
+                "val": "v.",
+                "type": "ST"
+              }
+            ],
+            "work▪extent▪extentType": [
+              {
+                "val": "3",
+                "type": "ST"
+              }
+            ],
+            "work▪extent▪extentTypeDescr": [
+              {
+                "val": "Pagination",
+                "type": "ST"
+              }
+            ],
+            "work▪extent▪extentUnitDescr": [
+              {
+                "val": "Pages",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪clusterUnitId": [
+        {
+          "val": "c3c941c2-c39c-4768-97ff-c096f31df67f",
+          "type": "ST"
+        }
+      ],
+      "work▪recordLevelDescr": [
+        {
+          "val": "Serial",
+          "type": "ST"
+        }
+      ],
+      "work▪version": [
+        {
+          "val": "100",
+          "type": "LO"
+        }
+      ],
+      "work▪copyrightYear": [
+        {
+          "val": "1960",
+          "type": "ST"
+        }
+      ],
+      "work▪recordType": [
+        {
+          "val": "4",
+          "type": "ST"
+        }
+      ],
+      "work▪dataSource": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪dataSource▪sourcePrimaryKey": [
+              {
+                "val": "3195690",
+                "type": "ST"
+              }
+            ],
+            "work▪dataSource▪sourceCode": [
+              {
+                "val": "eeb701e5-7b36-46a5-9df4-704ab6ea1bb1",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪publishingFrequency": [
+        {
+          "val": "MONTHLY",
+          "type": "ST"
+        }
+      ],
+      "work▪workTitle": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪workTitle▪typeDescr": [
+              {
+                "val": "Main Title",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪title": [
+              {
+                "val": "Clinical pharmacology and therapeutics",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪type": [
+              {
+                "val": "MAIN",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪workTitle▪typeDescr": [
+              {
+                "val": "Bowker Main Title",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪title": [
+              {
+                "val": "CLINICAL PHARMACOLOGY AND THERAPEUTICS",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪type": [
+              {
+                "val": "BWKMAIN",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪workTitle▪typeDescr": [
+              {
+                "val": "Abbreviated Title",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪title": [
+              {
+                "val": "CLIN. PHARMACOL. THER.",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪type": [
+              {
+                "val": "ABBREV",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪workTitle▪typeDescr": [
+              {
+                "val": "Key Title",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪title": [
+              {
+                "val": "Clinical pharmacology and therapeutics",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪type": [
+              {
+                "val": "KEY",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪workTitle▪typeDescr": [
+              {
+                "val": "Medline Title Abbreviation",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪title": [
+              {
+                "val": "Clin Pharmacol Ther",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪type": [
+              {
+                "val": "ABBREVMEDLINE",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪workTitle▪typeDescr": [
+              {
+                "val": "Variant Title",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪title": [
+              {
+                "val": "CLINICAL PHARMACOLOGY & THERAPEUTICS",
+                "type": "ST"
+              }
+            ],
+            "work▪workTitle▪type": [
+              {
+                "val": "VARIANT",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ],
+      "work▪idno": [
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪idno▪typeDescr": [
+              {
+                "val": "Valid ISSN",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idnoRaw": [
+              {
+                "val": "0009-9236",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪validated": [
+              {
+                "val": "true",
+                "type": "BL"
+              }
+            ],
+            "work▪idno▪idno": [
+              {
+                "val": "0009-9236",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪type": [
+              {
+                "val": "VALISSN",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪idno▪idnoRaw": [
+              {
+                "val": "61066293",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪type": [
+              {
+                "val": "VALLCCN",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idno": [
+              {
+                "val": "61066293",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪typeDescr": [
+              {
+                "val": "Valid LCCN",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪idno▪idnoRaw": [
+              {
+                "val": "(OCoLC)1554939",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪type": [
+              {
+                "val": "OCLCNUM",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idno": [
+              {
+                "val": "1554939",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪typeDescr": [
+              {
+                "val": "OCLC Number",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪idno▪typeDescr": [
+              {
+                "val": "Valid CODEN",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idnoRaw": [
+              {
+                "val": "CLPTAT",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪validated": [
+              {
+                "val": "true",
+                "type": "BL"
+              }
+            ],
+            "work▪idno▪idno": [
+              {
+                "val": "CLPTAT",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪type": [
+              {
+                "val": "VALCODEN",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪idno▪typeDescr": [
+              {
+                "val": "Valid ISSN-L",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idnoRaw": [
+              {
+                "val": "0009-9236",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪validated": [
+              {
+                "val": "true",
+                "type": "BL"
+              }
+            ],
+            "work▪idno▪idno": [
+              {
+                "val": "0009-9236",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪type": [
+              {
+                "val": "VALISSNL",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪idno▪idnoRaw": [
+              {
+                "val": "SN 78006220",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪type": [
+              {
+                "val": "CANINVALLCCN",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idno": [
+              {
+                "val": "SN 78006220",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪typeDescr": [
+              {
+                "val": "Canceled/Invalid LCCN",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪idno▪idnoRaw": [
+              {
+                "val": "70010970",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪type": [
+              {
+                "val": "CCCID",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idno": [
+              {
+                "val": "70010970",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪typeDescr": [
+              {
+                "val": "CCC",
+                "type": "ST"
+              }
+            ]
+          }
+        },
+        {
+          "val": None,
+          "type": "GR",
+          "items": {
+            "work▪idno▪idnoRaw": [
+              {
+                "val": "24831",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪type": [
+              {
+                "val": "CCCTITLEID",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪idno": [
+              {
+                "val": "24831",
+                "type": "ST"
+              }
+            ],
+            "work▪idno▪typeDescr": [
+              {
+                "val": "CCC Title",
+                "type": "ST"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "_id": "90c4512b-981e-4d09-bb1c-99b5ebb55c9c",
+    "relationships": [
+      {
+        "val": "fcbf2a69-aad1-46c9-bb6e-89eb5ae20024",
+        "type": "GR",
+        "items": {
+          "work▪relationship▪titleMain": [
+            {
+              "val": "Clinical pharmacology & therapeutics (CD-ROM)",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪idno": [
+            {
+              "val": None,
+              "type": "GR",
+              "items": {
+                "work▪relationship▪idno▪idno": [
+                  {
+                    "val": "SN 95004268",
+                    "type": "ST"
+                  }
+                ],
+                "work▪relationship▪idno▪type": [
+                  {
+                    "val": "VALLCCN",
+                    "type": "ST"
+                  }
+                ]
+              }
+            },
+            {
+              "val": None,
+              "type": "GR",
+              "items": {
+                "work▪relationship▪idno▪idno": [
+                  {
+                    "val": "10858733",
+                    "type": "ST"
+                  }
+                ],
+                "work▪relationship▪idno▪type": [
+                  {
+                    "val": "VALISSN",
+                    "type": "ST"
+                  }
+                ]
+              }
+            }
+          ],
+          "work▪relationship▪typeDescr": [
+            {
+              "val": "Other Format",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪nature": [
+            {
+              "val": "WRIA",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪type": [
+            {
+              "val": "OTHERFORMAT",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪typeRaw": [
+            {
+              "val": "OTHERFORMAT",
+              "type": "ST"
+            }
+          ]
+        }
+      },
+      {
+        "val": "8b2e9cbb-8e85-4436-8900-676690f279b1",
+        "type": "GR",
+        "items": {
+          "work▪relationship▪titleMain": [
+            {
+              "val": "Clinical pharmacology & therapeutics (Online)",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪idno": [
+            {
+              "val": None,
+              "type": "GR",
+              "items": {
+                "work▪relationship▪idno▪idno": [
+                  {
+                    "val": "45430462",
+                    "type": "ST"
+                  }
+                ],
+                "work▪relationship▪idno▪type": [
+                  {
+                    "val": "OCLCNUM",
+                    "type": "ST"
+                  }
+                ]
+              }
+            },
+            {
+              "val": None,
+              "type": "GR",
+              "items": {
+                "work▪relationship▪idno▪idno": [
+                  {
+                    "val": "00213633",
+                    "type": "ST"
+                  }
+                ],
+                "work▪relationship▪idno▪type": [
+                  {
+                    "val": "VALLCCN",
+                    "type": "ST"
+                  }
+                ]
+              }
+            },
+            {
+              "val": None,
+              "type": "GR",
+              "items": {
+                "work▪relationship▪idno▪idno": [
+                  {
+                    "val": "15326535",
+                    "type": "ST"
+                  }
+                ],
+                "work▪relationship▪idno▪type": [
+                  {
+                    "val": "VALISSN",
+                    "type": "ST"
+                  }
+                ]
+              }
+            }
+          ],
+          "work▪relationship▪typeDescr": [
+            {
+              "val": "Other Format",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪nature": [
+            {
+              "val": "WRIA",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪type": [
+            {
+              "val": "OTHERFORMAT",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪typeRaw": [
+            {
+              "val": "OTHERFORMAT",
+              "type": "ST"
+            }
+          ]
+        }
+      },
+      {
+        "val": "9403b03a-0f39-4ad2-bcf7-50b2a1ae70af",
+        "type": "GR",
+        "items": {
+          "work▪relationship▪titleMain": [
+            {
+              "val": "Clinical pharmacology & therapeutics (CD-ROM)",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪nature": [
+            {
+              "val": "WRIA",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪idno": [
+            {
+              "val": None,
+              "type": "GR",
+              "items": {
+                "work▪relationship▪idno▪idno": [
+                  {
+                    "val": "SN 95004268",
+                    "type": "ST"
+                  }
+                ],
+                "work▪relationship▪idno▪type": [
+                  {
+                    "val": "VALLCCN",
+                    "type": "ST"
+                  }
+                ]
+              }
+            },
+            {
+              "val": None,
+              "type": "GR",
+              "items": {
+                "work▪relationship▪idno▪idno": [
+                  {
+                    "val": "10858733",
+                    "type": "ST"
+                  }
+                ],
+                "work▪relationship▪idno▪type": [
+                  {
+                    "val": "VALISSN",
+                    "type": "ST"
+                  }
+                ]
+              }
+            }
+          ],
+          "work▪relationship▪typeRaw": [
+            {
+              "val": "OTHERFORMAT",
+              "type": "ST"
+            }
+          ]
+        }
+      },
+      {
+        "val": "dcae1943-5890-4540-a2b3-7b03e9dd5430",
+        "type": "GR",
+        "items": {
+          "work▪relationship▪titleMain": [
+            {
+              "val": "Clinical pharmacology & therapeutics (Online)",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪nature": [
+            {
+              "val": "WRIA",
+              "type": "ST"
+            }
+          ],
+          "work▪relationship▪idno": [
+            {
+              "val": None,
+              "type": "GR",
+              "items": {
+                "work▪relationship▪idno▪idno": [
+                  {
+                    "val": "45430462",
+                    "type": "ST"
+                  }
+                ],
+                "work▪relationship▪idno▪type": [
+                  {
+                    "val": "OCLCNUM",
+                    "type": "ST"
+                  }
+                ]
+              }
+            },
+            {
+              "val": None,
+              "type": "GR",
+              "items": {
+                "work▪relationship▪idno▪idno": [
+                  {
+                    "val": "00213633",
+                    "type": "ST"
+                  }
+                ],
+                "work▪relationship▪idno▪type": [
+                  {
+                    "val": "VALLCCN",
+                    "type": "ST"
+                  }
+                ]
+              }
+            },
+            {
+              "val": None,
+              "type": "GR",
+              "items": {
+                "work▪relationship▪idno▪idno": [
+                  {
+                    "val": "15326535",
+                    "type": "ST"
+                  }
+                ],
+                "work▪relationship▪idno▪type": [
+                  {
+                    "val": "VALISSN",
+                    "type": "ST"
+                  }
+                ]
+              }
+            }
+          ],
+          "work▪relationship▪typeRaw": [
+            {
+              "val": "OTHERFORMAT",
+              "type": "ST"
+            }
+          ]
+        }
+      }
+    ],
+    "workAttribute": {
+      "verified": False,
+      "isNew": False,
+      "requiresVerification": False,
+      "useSPK": False,
+      "jobId": "7ed01f51-c30a-4b2b-b1ee-62823f36f3dc",
+      "clusterKeyIds": [
+        "6b64c564529bee000305ab5c892049c231eeda58",
+        "a93eeccd861049242c49c917840e8ca30902a929",
+        "a3df3b2229b5a98df88efdca4ad28ad84c7fe12c",
+        "7cf4ba740bf68652d93bc5edb01bc3fddfc0dac3"
+      ],
+      "editedWorkId": "af29f8d9-78a6-4680-b921-b19d0c6771e2",
+      "fromManualMatching": True,
+      "preserved": False,
+      "valid": 0,
+      "jobUnitId": "0"
+    },
+    "matchItemValues": {
+      "work▪dataSource▪sourcePrimaryKey": "3195690",
+      "work▪contributor▪contributorName": "american therapeutic society",
+      "work▪idno▪idno#VALLCCN|work▪idno▪type": "61066293",
+      "work▪publisher▪name#8|work▪publisher▪role": "nature publishing group",
+      "work▪publicationCountry▪country": "usa",
+      "work▪idno▪idno#OCLCNUM|work▪idno▪type": "1554939",
+      "work▪idno▪idno#CANINVALLCCN|work▪idno▪type": "sn78006220",
+      "work▪dataSource▪sourceCode": "eeb701e5 7b36 46a5 9df4 704ab6ea1bb1",
+      "work▪workTitle▪title#HASCOMMONTITLE|work▪workTitle▪type": "false",
+      "work▪idno▪idno#VALISSN|work▪idno▪type": "00099236",
+      "work▪workDates▪startDate": "1960",
+      "work▪workTitle▪title#MAIN|work▪workTitle▪type": "clinical pharmacology and therapeutics"
+    },
+    "comments": {
+      "8759dfc7-ee96-4566-85be-f4bca2622127": {
+        "commentType": "BIBLIOGRAPHIC",
+        "createdDate": datetime
+        .
+        datetime
+        (
+        2013,
+        9,
+        30,
+        15,
+        28,
+        14,
+        348000
+        ),
+        "createdUser": "mmelton@copyright.com",
+        "_id": "8759dfc7-ee96-4566-85be-f4bca2622127",
+        "comment": "Changed publisher info from Mosby to Nature per NPG request."
+      }
+    }
+  },
+  "_id": "90c4512b-981e-4d09-bb1c-99b5ebb55c9c"
+}

@@ -44,7 +44,8 @@ class WordDocument:
             document_fields[6]:
                 self.get_work_item_value(self.work, 'work▪contributor.work▪contributor▪contributorRole.val'),
             document_fields[7]:
-                self.get_work_item_value(self.work, 'work▪workTitle.work▪workTitle▪title.val'),
+                self.get_work_item_value_filtered(self.work, 'work▪workTitle.work▪workTitle▪title#$1.val',
+                                                  'work▪workTitle.work▪workTitle▪type.val=MAIN'),
             document_fields[8]:
                 self.get_work_item_value(self.work, 'work▪idno.work▪idno▪idno.val'),
             document_fields[9]:
@@ -61,22 +62,36 @@ class WordDocument:
 
         return features
 
-    def get_work_item_value(self, work, path):
+    def get_work_item_value_filtered(self, work, path, filter):
+        filter_split = filter.split('=')
+        value = self.get_work_item_value(work, filter_split[0], '%s__%s').split('__')
+        return self.get_work_item_value(work, path.replace('$1', str(value.index(filter_split[1]))))
+
+    def get_work_item_value(self, work, path, list_formatter='%s %s'):
         path_array = path.split('.')
         if len(path_array) == 0 or '' == path:
             return work
+        filter_index = -1
+        current_path_item = path_array[0]
+        if '#' in current_path_item:
+            filter_index = int(current_path_item.split('#')[1])
+            current_path_item = current_path_item.split('#')[0]
         if 'work' in work and 'workItemValues' in work['work']:
-            return self.get_work_item_value(work['work']['workItemValues'], path)
+            return self.get_work_item_value(work['work']['workItemValues'], path, list_formatter)
         elif type(work) == list:
             result = ''
-            for list_item in work:
-                value = self.get_work_item_value(list_item, path)
-                if '' != value:
-                    result = '%s %s' % (result, value)
+            for i, list_item in enumerate(work):
+                if filter_index == i or filter_index == -1:
+                    value = self.get_work_item_value(list_item, path, list_formatter)
+                    if '' != value:
+                        if result == '':
+                            result = value
+                        else:
+                            result = list_formatter % (result, value)
             return result.strip()
         elif type(work == dict):
-            if path_array[0] in work:
-                return self.get_work_item_value(work[path_array[0]], '.'.join(path_array[1:]))
+            if current_path_item in work:
+                return self.get_work_item_value(work[current_path_item], '.'.join(path_array[1:]), list_formatter)
             elif 'items' in work:
-                return self.get_work_item_value(work['items'], '.'.join(path_array))
+                return self.get_work_item_value(work['items'], '.'.join(path_array), list_formatter)
         return ''
