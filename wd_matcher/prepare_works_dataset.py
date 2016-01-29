@@ -15,11 +15,10 @@ ch.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(me
 ch.setLevel(logging.DEBUG)
 logger.addHandler(ch)
 
-
 config = configparser.ConfigParser()
 config.read('settings.ini')
 
-max_rel = 500
+max_rel = -1
 client = MongoClient(config['GEN']['mongodb.host'], int(config['GEN']['mongodb.port']))
 db = client.works
 works_collection = db.archive_works
@@ -57,7 +56,7 @@ def dump_rel_to_csv(filters):
                     work_incoming = works_collection.find_one({'_id': incoming_work_id})
                     work_representative = works_collection.find_one({'_id': representative_work_id})
                     if work_incoming and work_representative:
-                        if rel_processed >= max_rel:
+                        if max_rel != -1 and rel_processed >= max_rel:
                             break
                         else:
                             rel_processed += 1
@@ -72,9 +71,9 @@ def dump_rel_to_csv(filters):
             logger.info('%s/%s relationships are valid for filter %s' % (rel_processed, max_rel, filter))
 
 
-# if os.path.exists('dataset'):
-#     shutil.rmtree('dataset')
-# os.makedirs('dataset')
-# dump_rel_to_csv(['FORCE_NO_MATCH', 'FORCE_MATCH'])
+if os.path.exists('dataset'):
+    shutil.rmtree('dataset')
+os.makedirs('dataset')
+dump_rel_to_csv(['FORCE_NO_MATCH', 'FORCE_MATCH'])
 # dump_rel_to_csv('FORCE_MATCH')
 # dump_rel_to_csv('FORCE_NO_MATCH')
