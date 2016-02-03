@@ -12,7 +12,8 @@ document_fields = [
     'subject',
     'publishing_work_items.value',
     'publishing_work_items.type',
-    'publishing_work_items.unit'
+    'publishing_work_items.unit',
+    'primary_author',
 ]
 
 
@@ -24,7 +25,7 @@ class WordDocument:
         result = []
         features = self.get_document_features()
         for field in document_fields:
-            result.append(features[field].encode('utf-8'))
+            result.append(features[field])
         return result
 
     def get_document_features(self):
@@ -57,41 +58,42 @@ class WordDocument:
             document_fields[12]:
                 self.get_work_item_value(self.work, 'work▪extent.work▪extent▪extentType.val'),
             document_fields[13]:
-                self.get_work_item_value(self.work, 'work▪extent.work▪extent▪extentUnit.val')
+                self.get_work_item_value(self.work, 'work▪extent.work▪extent▪extentUnit.val'),
+            document_fields[14]:
+                self.get_work_item_value(self.work, 'work▪contributor.work▪contributor▪contributorName.val',
+                                         'work▪contributor.work▪contributor▪contributorRole=2'),
         }
 
         return features
 
     def get_work_item_value_filtered(self, work, path, filter):
         filter_split = filter.split('=')
-        value = self.get_work_item_value(work, filter_split[0], '%s__%s').split('__')
-        return self.get_work_item_value(work, path.replace('$1', str(value.index(filter_split[1]))))
+        value = self.get_work_item_value(work, filter_split[0], '__').split('__')
+        value_indexes = [str(i) for i, x in enumerate(value) if x == filter_split[1]]
+        return self.get_work_item_value(work, path.replace('$1', '|'.join(value_indexes)))
 
-    def get_work_item_value(self, work, path, list_formatter='%s %s'):
+    def get_work_item_value(self, work, path, list_separator='|'):
         path_array = path.split('.')
         if len(path_array) == 0 or '' == path:
             return work
-        filter_index = -1
+        filter_index = []
         current_path_item = path_array[0]
         if '#' in current_path_item:
-            filter_index = int(current_path_item.split('#')[1])
+            filter_index = current_path_item.split('#')[1].split('|')
             current_path_item = current_path_item.split('#')[0]
         if 'work' in work and 'workItemValues' in work['work']:
-            return self.get_work_item_value(work['work']['workItemValues'], path, list_formatter)
+            return self.get_work_item_value(work['work']['workItemValues'], path, list_separator)
         elif type(work) == list:
-            result = ''
+            results = []
             for i, list_item in enumerate(work):
-                if filter_index == i or filter_index == -1:
-                    value = self.get_work_item_value(list_item, path, list_formatter)
+                if len(filter_index) == 0 or str(i) in filter_index:
+                    value = self.get_work_item_value(list_item, path, list_separator)
                     if '' != value:
-                        if result == '':
-                            result = value
-                        else:
-                            result = list_formatter % (result, value)
-            return result.strip()
+                        results.append(value.strip())
+            return list_separator.join(results)
         elif type(work == dict):
             if current_path_item in work:
-                return self.get_work_item_value(work[current_path_item], '.'.join(path_array[1:]), list_formatter)
+                return self.get_work_item_value(work[current_path_item], '.'.join(path_array[1:]), list_separator)
             elif 'items' in work:
-                return self.get_work_item_value(work['items'], '.'.join(path_array), list_formatter)
+                return self.get_work_item_value(work['items'], '.'.join(path_array), list_separator)
         return ''

@@ -36,7 +36,7 @@ def get_work(work_id):
 
 
 def dump_rel_to_csv(filters):
-    with open(WORKS_DATASET_FILE, 'w') as csvfile:
+    with open(WORKS_DATASET_FILE, 'w', encoding='utf8') as csvfile:
         csv_writer = csv.writer(csvfile, lineterminator='\n')
         csv_writer.writerow(document_fields + ['label'])
         equivalence_relations = db.equivalence_relations

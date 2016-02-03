@@ -31,8 +31,8 @@ class WordDocumentFeatureDistancesTestCase(unittest.TestCase):
         value = self.wordDocumentDistances.get_work_item_value(self.work,
                                                                'work▪contributor.'
                                                                'work▪contributor▪contributorName.val').lower()
-        self.assertEqual('AMERICAN THERAPEUTIC SOCIETY. AMERICAN SOCIETY FOR CLINICAL PHARMACOLOGY AND THE '
-                         'AMERICAN SOCIETY FOR PHARMACOLOGY AND EXPERIMENTAL STEIN, C. MICHAEL'.lower(),
+        self.assertEqual('AMERICAN THERAPEUTIC SOCIETY.|AMERICAN SOCIETY FOR CLINICAL PHARMACOLOGY AND THE|'
+                         'AMERICAN SOCIETY FOR PHARMACOLOGY AND EXPERIMENTAL|STEIN, C. MICHAEL'.lower(),
                          value)
 
     def test_get_work_item_value_by_order_number(self):
@@ -40,3 +40,11 @@ class WordDocumentFeatureDistancesTestCase(unittest.TestCase):
                                                                         'work▪workTitle.work▪workTitle▪title#$1.val',
                                                                         'work▪workTitle.work▪workTitle▪type.val=MAIN')
         self.assertEqual('Clinical pharmacology and therapeutics'.lower(), value.lower())
+
+    def test_get_author(self):
+        value = self.wordDocumentDistances.get_work_item_value_filtered(self.work,
+                                                                        'work▪contributor.work▪contributor▪contributorName#$1.val',
+                                                                        'work▪contributor.work▪contributor▪contributorRole.val=2')
+        self.assertEqual('AMERICAN THERAPEUTIC SOCIETY.|'
+                         'AMERICAN SOCIETY FOR CLINICAL PHARMACOLOGY AND THE|'
+                         'AMERICAN SOCIETY FOR PHARMACOLOGY AND EXPERIMENTAL', value)
