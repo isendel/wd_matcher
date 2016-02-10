@@ -5,7 +5,8 @@ from wd_matcher.wd_distance import WDDistance
 from wd_matcher.constants import WORKS_DATASET_FILE
 from wd_matcher.constants import WORKS_DISTANCE_DATASET_FILE
 from wd_matcher.constants import WORKS_DISTANCE_DATASET_CMP_FILE
-from wd_matcher.works import document_fields
+
+# from wd_matcher.works import document_fields
 
 logger = logging.getLogger('prepare_dataset')
 logger.setLevel(logging.DEBUG)
@@ -18,9 +19,16 @@ config = configparser.ConfigParser()
 config.read('settings.ini')
 
 max_rows = -1
-match_strategy = {'publication_type': 'simple_match',
-                  'contributor.role': 'simple_match',
-                  'idno.type': 'simple_match'}
+# match_strategy = {'publication_type': 'simple_match',
+#                   'contributor.role': 'simple_match',
+#                   'idno.type': 'simple_match'}
+match_strategy = {'label': 'no_match',
+                  'work▪workDates▪startDate': 'simple_match',
+                  'work▪workDates▪date': 'simple_match',
+                  'work▪dataSource▪sourceCode': 'simple_match',
+                  'work▪dataSource▪sourcePrimaryKey': 'simple_match',
+                  'work▪workTitle▪title#HASCOMMONTITLE|work▪workTitle▪type': 'simple_match',
+                  }
 
 
 def generate_dataset():
@@ -36,6 +44,7 @@ def generate_dataset():
                     if current_row % 500 == 0:
                         print('Processed %s rows' % current_row)
                     if current_row == 0:
+                        document_fields = row
                         works_distance_dataset.writerow(row)
                         works_distance_dataset_augm.writerow(row)
                         row = next(works_dataset)
@@ -43,15 +52,13 @@ def generate_dataset():
                         row1 = row
                     else:
                         distance_array = WDDistance.get_scaled_distance_array(
-                                row1[:len(row) - 1], row[:len(row) - 1], document_fields, match_strategy)
-                        works_distance_dataset_augm.writerow(row1[:len(row) - 1])
-                        works_distance_dataset_augm.writerow(row[:len(row) - 1])
+                                row1[:len(row)], row[:len(row)], document_fields, match_strategy)
+                        works_distance_dataset_augm.writerow(row1)
+                        works_distance_dataset_augm.writerow(row)
                         works_distance_dataset_augm.writerow(
-                                distance_array + [
-                                    row[len(row) - 1]])
+                                distance_array)
                         works_distance_dataset.writerow(
-                                distance_array + [
-                                    row[len(row) - 1]])
+                                distance_array)
                     current_row += 1
                     if max_rows != -1 and current_row >= max_rows:
                         break

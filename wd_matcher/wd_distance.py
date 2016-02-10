@@ -12,7 +12,10 @@ class WDDistance:
             string1 = ' '.join(string1.split('|'))
         if '|' in string2:
             string2 = ' '.join(string2.split('|'))
-        return fuzz.token_sort_ratio(string1, string2)
+        ratio = fuzz.token_sort_ratio(string1, string2)
+        if ratio == 0:
+            return -100
+        return ratio
 
     @staticmethod
     def get_simple_distance(string1, string2):
@@ -30,6 +33,8 @@ class WDDistance:
     def get_distance(string1, string2, strategy):
         if 'simple_match' == strategy:
             return WDDistance.get_simple_distance(string1, string2)
+        elif 'no_match' == strategy:
+            return string1
         else:
             return WDDistance.get_fuzzy_distance(string1, string2)
 

@@ -28,40 +28,54 @@ class WordDocument:
             result.append(features[field])
         return result
 
+    def get_features_json(self, label):
+        result = {'label': label}
+        if 'matchItemValues' in self.work['work']:
+            result.update(self.work['work']['matchItemValues'])
+        return result
+
     def get_document_features(self):
         features = {
             document_fields[0]:
-                self.get_work_item_value(self.work, 'work▪publisher.work▪publisher▪name.val'),
+                self.get_work_item_value(self.work, 'work.workItemValues.work▪publisher.work▪publisher▪name.val'),
             document_fields[1]:
-                self.get_work_item_value(self.work, 'work▪publisher.work▪publisher▪placeOfPublication.val'),
+                self.get_work_item_value(self.work,
+                                         'work.workItemValues.work▪publisher.work▪publisher▪placeOfPublication.val'),
             document_fields[2]:
-                self.get_work_item_value(self.work, 'work▪publicationType.val'),
+                self.get_work_item_value(self.work, 'work.workItemValues.work▪publicationType.val'),
             document_fields[3]:
-                self.get_work_item_value(self.work, 'work▪publicationCountry.work▪publicationCountry▪country.val'),
+                self.get_work_item_value(self.work,
+                                         'work.workItemValues.work▪publicationCountry.work▪publicationCountry▪country.val'),
             document_fields[4]:
-                self.get_work_item_value(self.work, 'work▪workLanguage.work▪workLanguage▪language.val'),
+                self.get_work_item_value(self.work,
+                                         'work.workItemValues.work▪workLanguage.work▪workLanguage▪language.val'),
             document_fields[5]:
-                self.get_work_item_value(self.work, 'work▪contributor.work▪contributor▪contributorName.val'),
+                self.get_work_item_value(self.work,
+                                         'work.workItemValues.work▪contributor.work▪contributor▪contributorName.val'),
             document_fields[6]:
-                self.get_work_item_value(self.work, 'work▪contributor.work▪contributor▪contributorRole.val'),
+                self.get_work_item_value(self.work,
+                                         'work.workItemValues.work▪contributor.work▪contributor▪contributorRole.val'),
             document_fields[7]:
-                self.get_work_item_value_filtered(self.work, 'work▪workTitle.work▪workTitle▪title#$1.val',
-                                                  'work▪workTitle.work▪workTitle▪type.val=MAIN'),
+                self.get_work_item_value_filtered(self.work,
+                                                  'work.workItemValues.work▪workTitle.work▪workTitle▪title#$1.val',
+                                                  'work.workItemValues.work▪workTitle.work▪workTitle▪type.val=MAIN'),
             document_fields[8]:
-                self.get_work_item_value(self.work, 'work▪idno.work▪idno▪idno.val'),
+                self.get_work_item_value(self.work, 'work.workItemValues.work▪idno.work▪idno▪idno.val'),
             document_fields[9]:
-                self.get_work_item_value(self.work, 'work▪idno.work▪idno▪type.val'),
+                self.get_work_item_value(self.work, 'work.workItemValues.work▪idno.work▪idno▪type.val'),
             document_fields[10]:
-                self.get_work_item_value(self.work, 'work▪workSubject.work▪workSubject▪subject.val'),
+                self.get_work_item_value(self.work,
+                                         'work.workItemValues.work▪workSubject.work▪workSubject▪subject.val'),
             document_fields[11]:
-                self.get_work_item_value(self.work, 'work▪extent.work▪extent▪extentValueRaw.val'),
+                self.get_work_item_value(self.work, 'work.workItemValues.work▪extent.work▪extent▪extentValueRaw.val'),
             document_fields[12]:
-                self.get_work_item_value(self.work, 'work▪extent.work▪extent▪extentType.val'),
+                self.get_work_item_value(self.work, 'work.workItemValues.work▪extent.work▪extent▪extentType.val'),
             document_fields[13]:
-                self.get_work_item_value(self.work, 'work▪extent.work▪extent▪extentUnit.val'),
+                self.get_work_item_value(self.work, 'work.workItemValues.work▪extent.work▪extent▪extentUnit.val'),
             document_fields[14]:
-                self.get_work_item_value(self.work, 'work▪contributor.work▪contributor▪contributorName.val',
-                                         'work▪contributor.work▪contributor▪contributorRole=2'),
+                self.get_work_item_value(self.work,
+                                         'work.workItemValues.work▪contributor.work▪contributor▪contributorName.val',
+                                         'work.workItemValues.work▪contributor.work▪contributor▪contributorRole=2'),
         }
 
         return features
@@ -81,8 +95,8 @@ class WordDocument:
         if '#' in current_path_item:
             filter_index = current_path_item.split('#')[1].split('|')
             current_path_item = current_path_item.split('#')[0]
-        if 'work' in work and 'workItemValues' in work['work']:
-            return self.get_work_item_value(work['work']['workItemValues'], path, list_separator)
+        # if 'work' in work and 'workItemValues' in work['work']:
+        #     return self.get_work_item_value(work['work']['workItemValues'], path, list_separator)
         elif type(work) == list:
             results = []
             for i, list_item in enumerate(work):

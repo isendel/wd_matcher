@@ -8,3 +8,4 @@ class WDDistanceTest(unittest.TestCase):
         # print(WDDistance.get_fuzzy_distance('test', 'tset'))
         # print(WDDistance.get_fuzzy_distance('test and nottest', 'test & nottest'))
         print(WDDistance.get_fuzzy_distance('Freund', 'FREUND PUBLISHING HOUSE, LTD.'))
+        print(WDDistance.get_fuzzy_distance('nature publishing group', 'elsevier science'))
